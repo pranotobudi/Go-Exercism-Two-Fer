@@ -1,22 +1,13 @@
-// This is a "stub" file.  It's a little start on your solution.
-// It's not a complete solution though; you have to write some code.
-
-// Package twofer should have a package comment that summarizes what it's about.
-// https://golang.org/doc/effective_go.html#commentary
+// Package twofer implements string processing functions.
 package twofer
 
-// ShareWith should have a comment documenting it.
+// ShareWith function receive 1 string parameter 'name', and return a string.
+// it will return 'One for X, one for me.' Where X is the given name.
+//it will return 'One for you, one for me.' if the name is missing
 func ShareWith(name string) string {
-	// Write some code here to pass the test suite.
-	// Then remove all the stock comments.
-	// They're here to help you get started but they only clutter a finished solution.
-	// If you leave them in, reviewers may protest!
-	var text string = ""
 
 	if name == "" {
-		text = "One for you, one for me."
-	} else {
-		text = "One for " + name + ", one for me."
+		name = "you"
 	}
-	return text
+	return "One for " + name + ", one for me."
 }
